@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="entity._Rate_">
+        <table name="rate" schema="baza_okienka_lab4"/>
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+            </id>
+            <basic name="ocena">
+                <column name="ocena"/>
+            </basic>
+            <basic name="dataWystawieniaOceny">
+                <column name="data_wystawienia_oceny"/>
+            </basic>
+            <basic name="komentarz">
+                <column name="komentarz"/>
+            </basic>
+            <many-to-one name="grupyByGrupy" optional="true" target-entity="entity._Grupy_">
+                <join-column name="grupy" nullable="false" referenced-column-name="id"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

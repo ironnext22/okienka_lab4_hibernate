@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="entity._Teacher_">
+        <table name="teacher" schema="baza_okienka_lab4"/>
+        <attributes>
+            <id name="id">
+                <column name="id"/>
+            </id>
+            <basic name="imie">
+                <column name="imie"/>
+            </basic>
+            <basic name="nazwisko">
+                <column name="nazwisko"/>
+            </basic>
+            <basic name="stan">
+                <column name="stan"/>
+            </basic>
+            <basic name="rokUrodzenia">
+                <column name="rok_urodzenia"/>
+            </basic>
+            <basic name="wynagrodzenie">
+                <column name="wynagrodzenie"/>
+            </basic>
+            <many-to-one name="grupyByGrupa" optional="true" target-entity="entity._Grupy_">
+                <join-column name="grupa" nullable="false" referenced-column-name="id"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

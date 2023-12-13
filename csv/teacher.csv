@@ -1,0 +1,6 @@
+id,imie,nazwisko,stan,rok_urodzenia,wynagrodzenie,grupa
+1,test,test,obecny,2000,4000.23,1
+6,test,test,obecny,1888,5000.0,1
+7,test,test,obecny,1888,1000.0,1
+8,test,atest,obecny,1888,1000.0,1
+9,Maciej,Stec,chory,2000,2000.0,1
